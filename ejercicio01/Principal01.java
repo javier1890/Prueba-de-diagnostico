@@ -48,9 +48,14 @@ public class Principal01 {
 		                   System.out.println("\n\n");
 		                   break;
 		               case 2:
+		            	   
+		            	   int descuento,descuento2;
 		                   System.out.println("Descuento por viaje");
-		                   System.out.println("ingrese el descuento por viaje:");
-		                   a2=leer.nextInt();
+		                   System.out.println("ingrese el descuento por viaje en %:");
+		                   descuento=leer.nextInt();
+		                   descuento2=descuento/100;
+		                   
+		                   a2=descuento2*user[i].getSaldof();
 		                   user[i].setSaldof(a2);
 		                   System.out.println("\n\n");
 		                   
