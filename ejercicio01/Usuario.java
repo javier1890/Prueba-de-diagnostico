@@ -1,31 +1,25 @@
-package certamen01.ejercicio01;
+package certamen01;
 
 public class Usuario {
 
-	public enum User {
-		comun, tne, bip;
-	}
-
 	private long numero_tarjeta;
-	private Usuario tipo;
+	private String tipo;
 	private int saldof;
 	private int descuentof;
 	private boolean activa;
 
 	public Usuario() {
-		this.saldof=0;
-		this.activa=true;
+
 	}
 
-	public Usuario(long numero_tarjeta, Usuario tipo, int saldof, int descuentof) {
+	public Usuario(long numero_tarjeta, String tipo, int saldof, boolean activa) {
 		super();
 		this.numero_tarjeta = numero_tarjeta;
 		this.tipo = tipo;
 		this.saldof = saldof;
-		this.descuentof = descuentof;
+		this.activa = activa;
 	}
-	
-	
+
 	public boolean isActiva() {
 		return activa;
 	}
@@ -33,8 +27,6 @@ public class Usuario {
 	public void setActiva(boolean activa) {
 		this.activa = activa;
 	}
-
-	
 
 	public long getNumero_tarjeta() {
 		return numero_tarjeta;
@@ -44,11 +36,11 @@ public class Usuario {
 		this.numero_tarjeta = numero_tarjeta;
 	}
 
-	public Usuario getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(Usuario tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
@@ -70,10 +62,9 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [numero_tarjeta=" + numero_tarjeta + ", tipo=" + tipo + ", saldof=" + saldof + ", descuentof="
-				+ descuentof + "]";
+		return "Usuario [numero_tarjeta=" + numero_tarjeta + ", tipo=" + tipo + ", saldof=" + saldof + ", activa="
+				+ activa + "]";
 	}
 
-	
 	
 }
